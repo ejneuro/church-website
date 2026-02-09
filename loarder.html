@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christ For All People Church - Kiminini</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file -->
+</head>
+<body>
+
+
+    <!-- Preloader Section -->
+    <div id="preloader">
+        <div class="loader-container">
+            <img src="img/cap.jpg" width="150px" height="150px">
+                <!--Tab to edit-->
+            </img>
+            <!-- "quantum system" text element -->
+            
+            
+            <!-- Progress Bar Container -->
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar">
+                    <!-- The counting percentage will be placed here by JS -->
+                    <span id="progressCounter">0%</span>
+                </div>
+            </div>
+          <div class="loading-text">Welcome All</div>
+        </div>
+    </div>
+
+
+    <!-- Main Content Section -->
+    <div id="content" style="display: none;">
+        <!-- Your actual website content goes here -->
+        <h1>Welcome to the Quantum System!</h1>
+        <p>This is the main content of your website.</p>
+        <!-- You can put your login form here -->
+    </diiv>
+    <style>""
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #fff;
+}
+
+
+/* Preloader styles */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff; /* Dark background for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.5s ease-out; /* Smooth fade-out effect */
+}
+
+
+.loader-container {
+    text-align: center;
+}
+
+
+/* Text Animation: "quantum system" coming together */
+.loading-text {
+    font-size: 60px;
+    color: hotpink;
+    margin-top: 70px;
+    overflow: hidden;
+    white-space: nowrap;
+    /* Animation definition */
+    animation: reveal-text 2s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+
+@keyframes reveal-text {
+    0% {
+        width: 0;
+        opacity: 0;
+        letter-spacing: 1em; /* Start with wide spacing */
+    }
+    100% {
+        width: 100%;
+        opacity: 1;
+        letter-spacing: normal; /* End with normal spacing (coming together) */
+    }
+}
+
+
+/* Progress Bar Styles */
+.progress-bar-container {
+    width: 700px;
+    height: 60px;
+    background-color: lightgrey;
+    border-radius: 15px;
+    overflow: hidden;
+    margin:0 auto;
+    margin-top: 100px;
+}
+
+
+.progress-bar {
+    height: 100%;
+    width: 0%; /* JS will control this width */
+    background-color: dodgerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    transition: width 0.1s linear; /* Smooth transition for the width change */
+}
+
+
+/* Main Content Styles */
+#content {
+    padding: 20px;
+}
+</style>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const progressBar = document.getElementById('progressBar');
+    const progressCounter = document.getElementById('progressCounter');
+    const preloader = document.getElementById('preloader');
+    const mainContent = document.getElementById('content');
+    
+    let progress = 0;
+    const duration = 3000; // 2 seconds
+    const intervalTime = duration / 100; // Update every 20ms for 100 steps
+
+
+    // Function to update the progress bar and counter
+    const updateProgress = () => {
+        if (progress < 100) {
+            progress++;
+            progressBar.style.width = progress + '%';
+            progressCounter.textContent = progress + '%';
+        }
+    };
+
+
+    // Start the counting interval
+    const progressInterval = setInterval(updateProgress, intervalTime);
+
+
+    // Use setTimeout to hide the preloader after exactly 2 seconds
+    setTimeout(() => {
+        clearInterval(progressInterval); // Stop the counter at 100%
+        progressBar.style.width = '100%';
+        progressCounter.textContent = '100%';
+
+
+        // Fade out the preloader
+        preloader.style.opacity = '0';
+        
+        // Hide the preloader completely and show content after the fade transition ends (0.5s)
+        setTimeout(() => {
+            window.location='index.html'// Show the main content
+        }, 500); 
+
+
+    }, duration);
+});
+
+</script>
