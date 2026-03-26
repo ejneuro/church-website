@@ -1,10 +1,13 @@
 Church Website Project
 
 Description
+
 This project is a simple church website developed as a learning project in web development.
 It is intended to provide basic information about a church and serve as a foundation for a more functional system in the future.
 At its current stage, the website focuses on presenting static content clearly and accessibly.
+
 Current Features
+
 Church overview and background
 Church history
 Information about services and worship schedules
@@ -36,9 +39,12 @@ Improved responsiveness and accessibility
 Deployment with a backend server
 
 Live Demo
+
 The website is hosted using GitHub Pages and can be accessed here:
-https://ejneuro.github.io�
+https://ejneuro.github.io/church-website
+
 Author
+
 Developed by Eugine Weks
 BSc Information Technology student
 Kibabi university 
