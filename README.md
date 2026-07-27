@@ -1,50 +1,81 @@
-Church Website Project
+# Church Website
 
-Description
+A responsive, static website for a church community, built with HTML, CSS, and JavaScript. This project demonstrates web development fundamentals and serves as a foundation for future enhancements.
 
-This project is a simple church website developed as a learning project in web development.
-It is intended to provide basic information about a church and serve as a foundation for a more functional system in the future.
-At its current stage, the website focuses on presenting static content clearly and accessibly.
+## Overview
 
-Current Features
+This repository contains a modern, accessible church website that provides members and visitors with essential information about the congregation, services, and events. The site is built with vanilla web technologies and hosted on GitHub Pages for simplicity and reliability.
 
-Church overview and background
-Church history
-Information about services and worship schedules
-Display of church events and announcements
-Clean and simple user interface built with basic web technologies
+## Features
 
-Technologies Used
+- **Church Information**: Overview and history of the church
+- **Service Details**: Worship schedules and service information
+- **Events & Announcements**: Display of upcoming church events and announcements
+- **Clean Interface**: Responsive, user-friendly design
+- **Static Content**: Fast-loading, SEO-friendly architecture
 
-HTML
-CSS
-JavaScript
-GitHub Pages for hosting
+## Technology Stack
 
-Purpose of the Project
+- **HTML5**: Semantic markup and structure
+- **CSS3**: Responsive styling and layout
+- **JavaScript**: Interactive elements and functionality
+- **GitHub Pages**: Static site hosting and deployment
 
-This project was created for:
-Practicing core web development skills
-Applying classroom knowledge to a real-world style project
-Building a portfolio as an IT / Software Engineering–oriented student
+## Project Structure
 
+```
+church-website/
+├── index.html          # Main landing page
+├── css/               # Stylesheets
+├── js/                # JavaScript files
+├── assets/            # Images and media
+└── README.md          # This file
+```
 
-Future Improvements
+## Live Demo
 
-Planned enhancements include:
-Adding a backend system for managing events and services
-Database integration
-Admin panel for content management
-Improved responsiveness and accessibility
-Deployment with a backend server
+View the website at: [https://ejneuro.github.io/church-website](https://ejneuro.github.io/church-website)
 
-Live Demo
+## Getting Started
 
-The website is hosted using GitHub Pages and can be accessed here:
-https://ejneuro.github.io/church-website
+### Local Development
 
-Author
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ejneuro/church-website.git
+   cd church-website
+   ```
 
-Developed by Eugine Weks
-BSc Information Technology student
-Kibabi university 
+2. Open `index.html` in your browser or use a local server:
+   ```bash
+   python -m http.server 8000
+   # or
+   npx http-server
+   ```
+
+3. Visit `http://localhost:8000` in your browser
+
+## Future Enhancements
+
+Planned improvements include:
+
+- Backend API for dynamic content management
+- Database integration for events and announcements
+- Admin dashboard for content management
+- Enhanced mobile responsiveness and accessibility
+- Form submissions and email notifications
+- User authentication system
+
+## Author
+
+**Eugine Weks**  
+BSc Information Technology Student  
+Kibabi University
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 - see the LICENSE file for details.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit pull requests or open issues for bugs and feature requests.
